@@ -1,3 +1,3 @@
-# fibergo
+# Fibergo
 
-My attempt to master fiber in Go.
+My attempt to master Fiber in Golang.
