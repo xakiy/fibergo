@@ -11,6 +11,6 @@ func SetupRoutes(app *fiber.App) {
 	api := app.Group("/api", logger.New())  // Group endpoints with param 'api' and log whenever this endpoit is hit
 
 	// Setup the Node Routes
-	noteRoutes.SetupRoutes(api)
+	noteRoutes.SetupNoteRoutes(api)
 }
 

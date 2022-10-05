@@ -1,6 +1,15 @@
 package noteHandler
 
+import (
+	"github.com/gofiber/fiber/v2"
+	"github.com/xakiy/fibergo/database"
+	"github.com/xakiy/fibergo/internal/model"
+	"github.com/google/uuid"
+
+)
+
 func GetNotes(c *fiber.Ctx) error {
+	// return c.SendString("And the API is UP!")
 	db := database.DB
 	var notes []model.Note
 
@@ -113,7 +122,7 @@ func DeleteNote(c *fiber.Ctx) error {
     // Delete the note and retun error in encountered
     err := db.Delete(&note, "id = ?", id).Error
 
-    if err != Nil {
+    if err != nil {
     	return c.Status(404).JSON(fiber.Map{"status": "error", "message": "Failed to delete note", "data": nil})
     }
 

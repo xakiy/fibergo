@@ -13,6 +13,11 @@ func main() {
 	// Connecting to database
 	database.ConnectDB()
 
+	// app.Get("/", func(c *fiber.Ctx) error {
+	// 	err := c.SendString("And the API is UP!")
+	// 	return err
+	// })
+
 	// Setup the router
 	router.SetupRoutes(app)
 
